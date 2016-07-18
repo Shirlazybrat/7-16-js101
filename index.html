@@ -1,0 +1,199 @@
+<script type="text/javascript">
+// A property has no parenthesis ()
+// A method/function has ()
+
+// *****Printing stuff*****
+	// window.alert("Hello, World");
+	// Place "window" in front of the window to run js outside the browser
+
+	console.log("Hello World!");
+	console.dir("Hello World!")
+
+	document.write("Hello World!") 
+	//to print to the page or
+	window.document.write("Hello World!")
+
+
+// ****Variables****
+//****Strings- letters, number and other stuff you can amake with your keyboard. Strings are for PEOPLE. Must be inside a single '' or double quote " ". Sublime codes them in yellow.
+
+var fullName = "Shirlette Chambers";
+fullName= "Tammara Chambers";
+document.write(fullName);
+fullName = "Shirlette 'The Queen' Chambers";
+document.write(fullName);
+
+// escaping stuff- backslashes escape it out so js doesn't run it as code.
+fullName = "Shirlette \'The Queen\' Chambers";
+
+
+//Numbers
+// Integers- number with no decimal point
+var myAge =  30;
+var myAgeAsAString = "30";
+
+
+// camel case vs snake case (on_my_birthday)
+// Operators
+// in numbers a + is a plus sign. In strings a + is a concatenate sign
+var onMyBirthday = myAge + 1;
+onMyBirthday = myAgeAsAString + 1; /*return 371*/
+
+
+// Adding a string to an odject returns [object Object]
+var obj = {};
+var huh = myAgeAsAString + obj;
+console.log(huh);
+// returns --> 30[object Object]
+
+var obj = {};
+var huh = 30 + obj;
+console.log(huh);
+
+var doubleMyAge = myAge + myAge;
+doubleMyAge = myAge * 2;
+var halfMyAge = myAge / 2;
+
+// Floats - is a number with a decimal point 
+var floatNumber = 3.14;
+console.log(typeof(floatNumber));
+// tell if you have a number, string or object
+
+var MakeMeAnInteger = parseInt(3.14);
+// parseInt will turn it into an integer
+console.log(MakeMeAnInteger);
+// returns 3
+console.log(.1 + .2);
+
+// Boolean - True or False. 1 is true, 0 is false.
+var theTruth = true; //1
+var theLie = false;
+console.log(theTruth);
+console.log(typeof(theTruth));
+
+// Back to to operators, +, -, *, /
+//Modulus- returns the REMAINDER after dividing two numbers
+var amIEven = 13 % 2;
+console.log(amIEven);
+
+// More Math options...
+var addOneToMe = 1;
+var nerVar = addOneToMe++;   //2
+addOneToMe-- //1
+
+// prefix
+// if you want your ooperation to happen asap, put the ++ at the beginning
+// postfix
+// if you want your operation to happen last, put ++ at the end
+console.log(++myAge);
+
+// Order of Operations
+// * and / always comes first, then left to right
+// + and - come second, then left to right
+//() will change the order
+
+// concatenate a string and integer into something usefull...
+var aGreatLine = "The meaning of life" + (42 + 2);
+
+// Prompts - takes two arguments( a thing you pass to a function), the message( the top of the dialogue box) and the default answer.
+	//  var userName = prompt("What is your name?", "Arthur, King of the Brits");
+	// console.log(userName);
+// JS prompts are annoying and they are limited to the page. As soon as the user leaves, the info is lost
+// HTML forms cans end lots of data by many methods to other pages
+
+
+// CONDITIONALS
+	// var classSize = 15;
+	// var question = "How big is your coding class";
+	// var response = prompt(question, classSize);
+	// if(response == 15){ //make sure the value is the same
+	// 	console.log("You are in the July class");
+	// } 
+
+
+//will not work because response is a string
+	// console.log(typeof(response));
+	// if(response === 15){ // make sure the value and the data type is the same
+	// 	console.log("You are in the July class");
+	// } 
+
+// if((response == 15) && (typeof(response) == typeof(15))){
+// }
+
+
+// if (Number(response) === 15){
+// 	console.log("Five Rows of three");
+// }
+
+// else {
+// 	console.log("I don't know what class you're in.");
+// }
+
+// var simpleMathQuestion = prompt("What is 2 + 2");
+// var answerAsANumber = Number(simpleMathQuestion);
+// if(answerAsANumber === 4){  //Check if they got the right answer
+// 	console.log("correct");
+// }
+
+// else if(isNAN(answerAsANumber)){
+// 	console.log("You must enter a number.");
+// }
+
+// else {	
+// 	console.log("where did you go to school? It's 4....")
+// }
+
+	// var lotteryWinningNumber = 5;
+	// var youLotteryNumber = 9034754978987345;
+	// if(youLotteryNumber !== lotteryWinningNumber){
+	// 	console.log("Sorry, No one ever wins the lottery.");
+	// }
+
+//Random - a math object that returns a number between 0 inclusive and 1 exclusive
+	// var randomNumber = Math.random();
+	// console.log(randomNumber);
+	// var aNumberBetweenOneAndOneHundred = Math.round(randomNumber * 100);
+	// console.log(aNumberBetweenOneAndOneHundred);
+////////////////////////////////////////////////////////////////////////////////
+
+
+//Exercise
+//******************************************************
+// Make a prompt box that asks the user for a number between 1-10.
+// Generate a random number between 1-10.
+// If they match, congrat the user.
+// If they dont, console the user and tell them what it was
+// - if they are wrong, but within 2 of the number, tell them they were close and what the number was.
+// - if they are wrong but not within 2, tell them they weren't close and what the nunmber was
+//Lastly, make sure they entered a number
+
+// Make a prompt box that asks the user for a number between 1-10.
+var yourNum = prompt("Give a number between 1 and 10");
+var userInputAsANumber = Number(yourNum);
+
+// Generate a random number between 1-10.
+var randomNum = Math.floor(Math.random() * 10) + 1;
+
+// If they match, congrat the user.
+if(userInputAsANumber === randomNum) {
+	console.log("Congratulations, You guessed right");
+}
+
+// If they dont, console the user and tell them what it was
+// - if they are wrong, but within 2 of the number, tell them they were close and what the number was.
+// - if they are wrong but not within 2, tell them they weren't close and what the nunmber was
+else if (userInputAsANumber == randomNum +- 2 || userInputAsANumber == randomNum +- 1){
+	console.log("You were close. The number was " + randomNum);
+}
+
+else if(!isNaN(userInputAsANumber)){
+	console.log("You were not close. The number was " + randomNum);
+}
+
+//Lastly, make sure they entered a number
+else{
+	console.log("You must enter a number.")
+}
+
+
+</script>
