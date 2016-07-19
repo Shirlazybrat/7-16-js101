@@ -96,7 +96,7 @@ var properCase = firstChar.toUpperCase() + otherChar.toLowerCase;
 
 ///////////***********Exercise 2 **************//////////////////////
 
-// Given a number between 0 and 6 representing the days of the week, print "Go to work." if it's a work day and "Sleep in." if it's a weekend day.
+// 1. Given a number between 0 and 6 representing the days of the week, print "Go to work." if it's a work day and "Sleep in." if it's a weekend day.
  var date = new Date();
 
  	if(date.getDay() >= 1 && date.getDay() <= 5){
@@ -104,7 +104,7 @@ var properCase = firstChar.toUpperCase() + otherChar.toLowerCase;
  	}
 
 
-// Given a month number, between 1 and 12, and a year, print the number of days in that month - accounting for leap years.
+//2. Given a month number, between 1 and 12, and a year, print the number of days in that month - accounting for leap years.
 	var month = (date.getMonth());
 	var days = (date.getDay());
 	var year = (date.getYear());
@@ -118,16 +118,68 @@ var properCase = firstChar.toUpperCase() + otherChar.toLowerCase;
 	
 
 
-// Given the amount of a bill as a number, and a level of service - which can be "good", "fair", or "bad", print the total bill with the tip included. The amount of tip given for each level of service is defined by:
+// 3. Given the amount of a bill as a number, and a level of service - which can be "good", "fair", or "bad", print the total bill with the tip included. The amount of tip given for each level of service is defined by:
 // "good" -> 20%
 // "fair" -> 15%
 // "bad"  -> 10%
-
-var bill = 
-
-
-  
 // Like "Tip Calculator", except you are also given the number of people to divid the total into. Print the amount for each person to pay.
+
+//////OBJECTS//////////
+
+var plan1name = "Basic";
+var plan1Price =3.99;
+var plan1Space = 100;
+
+
+//var plan1 = ["Basic", 399, 100];  array
+
+// instead, create an object..
+var plan1 = {};
+plan1.name = "Basic";
+plan1.price = 3.99;
+plan1.space = [1, 1, 2, 3 ,5];
+
+
+var plan2 = {		///JSON object notation
+	name: "Professional",
+	price: 5.99,
+	space: 500			///do not put a comma after the last property of CRASH!!!
+}
+
+
+plan2.name;   ////will print out Professional (Dot notation)
+plan2['name'] ////Bracket notation ...will print the same
+
+  console.log(plan2.name); //professional
+  console.log(plan1.space); // 100
+
+
+plan1.calcAnnual = function(percent){
+	consoloe.log(percent / 12 / 100);
+}
+
+plan1.calcAnnuak(50);
+
+///Arrays of objects are easier to see and work with
+var theClass = var myClass = [
+	{
+		name: 'Shirlette',
+		homwtown: "Morganton"
+	},
+	{
+		name: 'Jackson',
+		favoriteGame: "Just Cause 3"
+	},
+	{name :'JT'},
+	{name:'Summer'},
+	{name: 'Alex'},
+	 ];
+
+theClass.push({name})
+
+console.log(theClass[0].name);
+
+
 
 </script>
 
