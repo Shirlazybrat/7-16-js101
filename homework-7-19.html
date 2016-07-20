@@ -1,0 +1,71 @@
+<!-- Homework
+Given a string, print the string uppercased. #string #easy
+Given a string, print the string capitalized. #string #easy
+Given a string, print the string reversed. #string #loop #easy
+Given a string, print "<string> is a palindrome" if it is a palindrome, or "<string> is not a palindrome" if it is not. What is a palindrome? 
+****Here is a list of know palindromes to test with (you will have to strip out the punctuation and spaces and normalize the casing) <http://www.palindromelist.net/>
+Given a paragraph of text, print the number of words in the paragraph. #string #easy
+ 
+Word Summary
+Given a paragraph of text, for each word present in the paragraph, print the number of time the word was used in the paragraph. Example: for the sentence: "The Caesar cipher is one of the earliest known and simplest ciphers." The output should be:
+
+```
+the: 2
+caesar: 1
+cipher: 2
+is: 1
+one: 1
+of: 1
+earliest: 1
+known: 1
+and: 1
+simplest: 1 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7-19 HW</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+function sentenceString (){
+var sentence = prompt("Type the longest word you can think of.");
+	alert("Your word in all caps is " + sentence.toUpperCase());
+
+
+var firstLetter = sentence.slice(0,1);
+var endLetters = sentence.slice(1);
+	firstChar = firstChar.toUpperCase();
+	endLetters = endLetters.toLowerCase();
+	sentence = firstChar + endLetters;
+	document.write("Your word capitailized is " + sentence);
+}
+
+function filpit(){
+var reverse = [];
+var my_str="Abuttuba"
+
+var i=my_str.length;
+i=i-1;
+
+for (var x = i; x >=0; x--)
+   {
+  reverse.push(my_str.charAt(x));
+  console.log(my_str.charAt(x));
+   }
+
+if(reverse === my_str.length){
+  console.log(my_str +" is a palindrome");
+	}
+else{
+  console.log(my_str + " is not a palindrome");
+	}
+}
+
+
+
+</script>
+</body>
+</html>
